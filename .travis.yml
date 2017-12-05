@@ -1,0 +1,20 @@
+language: objective-c
+osx_image: xcode8.1
+rvm:
+- 2.2
+before_install:
+- chmod a+x ./travis/install.sh
+- chmod a+x ./travis/build.sh
+install:
+- "./travis/install.sh"
+script:
+- "./travis/build.sh"
+deploy:
+  provider: releases
+  api_key:
+    secure: QTDwB9uLboCFQgxP5Yf+T6lNeaEb+bxzSkmn09nyEcpoFVaAnWGNGo+n5oz1f5N3EUVKGFfeLaown48v3iQSUuUlgkZCqhnKiRm2bKYPF2fSGqpaxognXk0wGMSN+6TcT56BKlsl6rYBWdpEyDRFwU9gJ/gdJjtMG4H5TPQ/2S4hs9uHtHEr9zLz8rh9ZpxQSN8ijH15PkMQMEjzq/2LiFhxdmml55YuOdhWtSQtTrwhfLTxe2k5zHdKWfrIRoLZc9Bkywd6saragjn0S6AVhprLxw3sgzELs/Bac6u/YlhAr51lBpDqQQCTU+GojvZoYbLoGmHOu0QaOGiFIQp3PTNJtOdbl2YV9MxRINIhzESkFCpKQm7m6JrhQCqNnbMp8R9zLEQmYqsZwkZWU2HJhF6sk9Q21iYTyBeGp8S/zlGm8l5AQjw0t19R8z3xpTmjdoY2Ij/Lo4ZeBAq/j+0oNRoPDEyYXjV6N25M6O5UAMRJSQRANPQ3J5dpO9gzduse+KcV0g36X7CeWyyAolv5WAK64ovFBsjTP/PgpAvt1szgnbej1EJzfNM7gMxGCVdAafHzvgSxvlE0d2nUBm8ty1Lo2MokRnAHT0+G5rUIqQE7yr2CdN9J864t2ANPl3FPTmbqmdyxoetB2B53oPu2U+DLq0W3iAGxDb8qW6/Wc0U=
+  file: 
+    - TestProjectMac.zip
+    - TestProjectWin.zip
+  on:
+    repo: JensFZ/TestProject
