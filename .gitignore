@@ -44,7 +44,7 @@ ScreenShots/*
 
 *.swp
 
-Assets/Scenes/Levels
+Assets/_Scenes/Levels
 Test/
 TestResults/
 tools/SteamUpload/output
