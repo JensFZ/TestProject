@@ -32,6 +32,10 @@ obj/
 ehthumbs.db
 Thumbs.db
 
+
+/Unity-Win.pkg
+/Unity.pkg
+
 Export
 packages
 Test
