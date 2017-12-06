@@ -16,5 +16,7 @@ deploy:
   file: 
     - TestProjectMac.zip
     - TestProjectWin.zip
+  skip_cleanup: true
   on:
     repo: JensFZ/TestProject
+    tags: true
