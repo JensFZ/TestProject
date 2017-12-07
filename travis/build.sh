@@ -9,7 +9,7 @@ echo "start build"
 	-logFile \
 	-projectpath $(pwd)/TestProject \
 	-buildOSXUniversalPlayer "$(pwd)/build/mac/TestProject.app" \
-	-quit $(pwd)/TestProject/Assets/_Scenes/Main.unity
+	-quit Assets/_Scenes/Main.unity
 
 /Applications/Unity/Unity.app/Contents/MacOS/Unity \
 	-batchmode \
@@ -18,7 +18,7 @@ echo "start build"
 	-logFile \
 	-projectpath $(pwd)/TestProject \
 	-buildWindowsPlayer "$(pwd)/build/win/TestProject.exe" \
-	-quit $(pwd)/TestProject/Assets/_Scenes/Main.unity
+	-quit Assets/_Scenes/Main.unity
 
 (cd build/mac/; zip -r ../../TestProjectMac.zip TestProject.app)
 (cd build/win/; zip -r ../../TestProjectWin.zip .)
